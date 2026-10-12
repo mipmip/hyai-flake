@@ -95,6 +95,17 @@ verifies its sha256 and the version inside it, and only then rewrites
 Review the diff and commit it. Nothing is written when the hash or the version
 disagrees with the manifest.
 
+## Continuous integration
+
+`.github/workflows/ci.yml` runs two jobs:
+
+- **check** (`nix flake check`) on every push and pull request, scoped to
+  `x86_64-linux`. `aarch64-linux` and `aarch64-darwin` are not built in CI; they
+  are validated by building on those systems.
+- **freshness** weekly and on demand (`./scripts/update.sh --check`). It fails
+  when upstream has published a version newer than the pin. It writes nothing and
+  opens no pull request; bumping stays a manual, reviewed change.
+
 ## Development
 
 ```bash

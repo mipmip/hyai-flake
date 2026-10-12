@@ -19,6 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   downloaded artifact before writing anything.
 - README documenting installation, that no coding agent is bundled, and how to
   update the pin.
+- A CI workflow running `nix flake check` on every push and pull request, scoped
+  to `x86_64-linux`, and a scheduled job that fails when the pin falls behind
+  upstream.
 
 ### Changed
 
