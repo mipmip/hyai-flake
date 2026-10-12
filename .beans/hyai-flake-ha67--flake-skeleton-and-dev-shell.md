@@ -1,10 +1,11 @@
 ---
 # hyai-flake-ha67
 title: Flake skeleton and dev shell
-status: in-progress
+status: completed
 type: epic
+priority: normal
 created_at: 2026-10-12T16:30:44Z
-updated_at: 2026-10-12T16:30:44Z
+updated_at: 2026-10-12T17:09:16Z
 parent: hyai-flake-kzxo
 ---
 
